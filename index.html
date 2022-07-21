@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dinographic</title>
-    <!-- Include Google fonts: Frijole, Open Sans, Oswald -->
-    <link href="https://fonts.googleapis.com/css?family=Frijole|Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <!-- Include Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@500&family=Raleway:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <!-- Normalize browser styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
     <!-- Link to app.js with defer till HTML render -->
     <script defer src="app.js"></script>
-</head>
-<body>
-    <header>
-        <h2>Natural History Museum</h2> 
-        <h1>Dinosaurs</h1>
-        <h3>How do you compare?</h3>
-    </header>
-    <!-- Form to get user input -->
-    <form id="dino-compare">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left-hand">
+        <header>
+          <h1>Dinosaurs</h1>
+          <h2>Natural History Museum</h2>
+          <h3>How do you compare?</h3>
+        </header>
+        <!-- Form to get user input -->
         <div class="form-container">
-            <p>Name:</p>
-            <input id="name" class="form-field__full" type="text" name="name">
-            <p>Height</p>
-            <label>Feet: <input id="feet" class="form-field__short" type="number" name="feet"></label>
-            <label>inches: <input id="inches" class="form-field__short" type="number" name="inches"></label>
-            <p>Weight:</p>
-            <label><input id="weight" class="form-field__full" type="number" name="weight">lbs</label>
-            <p>Diet:</p>
-            <select id="diet" class="form-field__full" name="diet">
-                <option>Herbavor</option>
-                <option>Omnivor</option>
-                <option>Carnivor</option>
-            </select>
-            <div id="btn">Compare Me!</div>
+          <form id="dino-compare">
+            <div class="form-section">
+              <label for="name">Name:</label>
+              <input id="name" class="form-field" type="text" name="name">
+            </div>
+
+            <div class="form-section">
+              <label>Height:</label>
+              <div class="form-section__evenly-spaced">
+                <input id="feet" class="form-field" type="number" name="feet" aria-label="height: feet" placeholder="Feet (ft)">
+                <input id="inches" class="form-field" type="number" name="inches" aria-label="height: inches" placeholder="Inches (in)">
+              </div>
+            </div>
+
+            <div class="form-section">
+              <label for="weight">Weight (in lbs):</label>
+              <input id="weight" class="form-field" type="number" name="weight">
+            </div>
+
+            <div class="form-section">
+              <label for="diet">Diet:</label>
+              <select id="diet" class="form-field" name="diet">
+                <option value="herbivore">Herbivore</option>
+                <option value="omnivore">Omnivore</option>
+                <option value="carnivore">Carnivore</option>
+              </select>
+            </div>
+
+            <button id="compare">Compare Me!</button>
+          </form>
         </div>
-    </form>
-    <!-- .grid to attach tiles to -->
-    <main id="grid"></main>
+      </div>
+      <!-- .grid to attach tiles to -->
+      <div class="right-hand">
+        <main id="grid">
+          <div class="grid-placeholder">
+            <img src="./images/human.png" alt="hooman" />
+          </div>
+        </main>
+      </div>
+    </div>
     <footer>
-        <!-- Include information source -->
-        <p class="fine-print">Data Sourced from <a href="https://www.wikipedia.org/">Wikipedia.org</a>, all numbers are approximations.</p>
+      <!-- Include information source -->
+      <p class="fine-print">
+        Data Sourced from <a href="https://www.wikipedia.org/">Wikipedia.org</a>, all numbers are approximations.
+      </p>
+      <p>Made with 💜 by ƒlo .</p>
     </footer>
-</body>
+  </body>
 </html>
