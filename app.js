@@ -1,45 +1,24 @@
 'use strict';
-function Creature() {
-	// Dino
-	// species
-	// image
-	// fact
 
-	// Human
-	// name
-	// image
+// Event handlers
+const handleCompareBtnClick = e => {
+	e.preventDefault();
 
-	// Bird is a subclass of Dino
-	// species
-	// image
-	// fact
-}
+	// Form values
+	const form = document.getElementById('dino-compare').parentElement;
+	const name = form.querySelector('#name').value;
+	const heightInFeet = form.querySelector('#feet').value;
+	const heightInInches = form.querySelector('#feet').value;
+	const weight = form.querySelector('#weight').value;
+	const diet = form.querySelector('#diet').value;
 
-// Create Dino Objects
+	if (!!name && !!heightInFeet && !!heightInInches && !!weight && !!diet) {
+		form.remove();
+	}
+};
 
-
-// Create Human Object
-
-// Use IIFE to get human data from form
-
-
-// Create Dino Compare Method 1
-// NOTE: Weight in JSON file is in lbs, height in inches.
-
-
-// Create Dino Compare Method 2
-// NOTE: Weight in JSON file is in lbs, height in inches.
-
-
-// Create Dino Compare Method 3
-// NOTE: Weight in JSON file is in lbs, height in inches.
-
-
-// Generate Tiles for each Dino in Array
-
-// Add tiles to DOM
-
-// Remove form from screen
-
-
-// On button click, prepare and display infographic
+// Initialize
+(() => {
+	const compareBtn = document.getElementById('compare');
+	compareBtn.addEventListener('click', handleCompareBtnClick);
+})();

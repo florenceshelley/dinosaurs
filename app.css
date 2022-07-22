@@ -173,7 +173,7 @@ select {
   font-weight: bold;
   text-align: center;
   color: #fff;
-  transition: ease 0.3s all;
+  transition: 0.3s ease all;
 }
 
 #compare:hover {
@@ -193,8 +193,8 @@ select {
   color: #fff;
 }
 
-/* Grid Styles */
-#grid {
+/* Art direction styles */
+#art-direction {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -206,9 +206,19 @@ select {
   background-size: contain;
 }
 
-img.grid-placeholder {
+#art-direction img {
   height: 250px;
   width: auto;
+}
+
+/* Grid Styles */
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .grid-item {
