@@ -122,7 +122,7 @@ const gridItem = obj => {
 	return container;
 };
 
-// Structures
+// Structures — todo
 function Creature(type, image) {
 	this.type = type;
 	this.image = image;
@@ -157,7 +157,7 @@ const handleCompareBtnClick = e => {
 	const form = document.getElementById('dino-compare').parentElement;
 	const name = form.querySelector('#name').value;
 	const heightInFeet = form.querySelector('#feet').value;
-	const heightInInches = form.querySelector('#feet').value;
+	const heightInInches = form.querySelector('#inches').value;
 	const weight = form.querySelector('#weight').value;
 	const diet = form.querySelector('#diet').value;
 
